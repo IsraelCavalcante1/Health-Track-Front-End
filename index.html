@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="./bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="./css/index.css">
+ 
+
+  <title>Health-Track Login</title>
+</head>
+
+<body>
+  <!-- Corpo de todo o HTML, onde tem todo o código -->
+  <div class="container-fluid  d-flex flex-column vh-100">
+    <!-- Row onde engloba todo o código -->
+    <div class="row flex-grow-1">
+      <!-- Coluna referente á parte esquerda, onde se tem o banner -->
+      <div class="col-md-6 background-logo flex-fill banner ">
+        <header><div class="logo-login">Health Track</div>
+        <img src="./Imagens/logo.png" class="logo-imagem-login">
+      </header>
+        <div class=" row-banner" id="slider">
+          <div class="selected tela-login-banner">
+            <label class="titulo-login-frases">Veja seus padrões de sono para um amanhã melhor</label>
+            <label class="descricao-login-frases">A qualidade geral do seu sono é tão importante quanto a quantidade de
+              horas. Sinta-se mais descansado otimizando seu horário de dormir com o Health Track. Monitore seu sono
+              durante toda a noite e tenha informações valiosas sobre como você está dormindo de verdade.
+            </label>
+            <img src="./Imagens/menina-acordando.jpg" class="imagem-login-frases-1" alt="Gif de login">
+          </div>
+          <div class="tela-login-banner ">
+            <label class="titulo-login-frases">Monitore seu condicionamento físico com a composição corporal</label>
+            <label class="descricao-login-frases">Veja informações importantes sobre sua composição corporal geral.
+              Controle alterações de peso, massa de gordura, massa muscular e porcentagem de gordura corporal para fazer
+              escolhas de vida melhores e mais saudáveis que o mantenham motivado.
+
+            </label>
+            <img src="./Imagens/ser-fitness.webp" class="imagem-login-frases-2" alt="Gif de login">
+          </div>
+          <div class="tela-login-banner ">
+            <label class="titulo-login-frases">Você é o que come</label>
+            <label class="descricao-login-frases">Crie hábitos alimentares saudáveis registrando suas refeições e seus
+              lanches diários com o Health Track. Descubra seus hábitos alimentares baseado no seu consumo diário de
+              vitaminas e nutrientes e tome medidas para ter uma dieta mais equilibrada.
+            </label>
+            <img src="./Imagens/comida-fitness.jpg" class="imagem-login-frases-2" alt="Gif de login">
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Coluna esquerda onde tem toda a parte de Login -->
+      <div class="col-md-6 centralizando-tela-login  flex-fill">
+        <div class="logo-login-mobile">Health Track</div>
+        <div class="borda-tela-login">
+          <div class="titulo-login">Login</div>
+          <div class="descricao-login">Se você já é um membro, pode fazer o login com seu endereço de e-mail e senha.
+          </div>
+          <!-- Formulário de login -->
+          <form>
+            <!-- Inputs referentes ao E-mail -->
+            <label for="email">E-mail: </label>
+            <div class="input-group mb-3 ">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope"></i></span>
+              </div>
+              <input type="text" class="form-control email" placeholder="Digite o e-mail" aria-label="email"
+                aria-describedby="basic-addon1">
+            </div>
+            <!-- Inputs referentes á senha -->
+            <label for="pwd">Senha: </label>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-key"></i></span>
+              </div>
+              <input type="password" class="form-control" id="minha-senha" placeholder="Digite a senha"
+                aria-label="Senha" aria-describedby="basic-addon1">
+            </div>
+            <!-- Input de exibir senha -->
+            <div class="form-check pt-1 espaco-input espaco-mostrar-senha">
+              <input onclick="LembrarSenha()" class="form-check-input" type="checkbox" value="" id="lembrar-senha">
+              <label class="form-check-label" for="lembrar-senha">
+                Exibir senha
+              </label>
+            </div>
+
+            <!-- Input lembrar-me (salvar usuário e senha para um próximo login) -->
+            <div class="form-check pt-1 espaco-input">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Lembrar-me
+              </label>
+            </div>
+            <!-- O hyperlink abaixo diz que: quando o usuário clicar em entrar será redirecionado para a Dashboard -->
+            <a class="btn btn-primary botao-entrar" href="./dashboard.html" role="button">Entrar</a>
+            <!-- O hyperlink abaixo diz que: quando o usuário clicar em registrar será redirecionado para o cadastro -->
+            <div class="registrar-usuario pt-3">Não tem uma conta?<a href="./registrar.html"
+                class="hyperlink-registrar"> Clique aqui</a>
+            </div>
+            <!-- Aqui tem a forma para entrar com o Google Account, também será redirecionado para o Dashboard -->
+            <div class="opcao-google">Ou</div>
+            <div class="google-btn"><a href="./dashboard.html" role="button">
+                <div class="google-icon-wrapper">
+                  <img class="google-icon"
+                    src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
+                </div>
+                <p class="btn-text"><b>Entre com o Google</b></p>
+              </a>
+            </div>
+        </div>
+
+
+      </div>
+      </form>
+      <!-- Final do formulário de Login -->
+    </div>
+
+
+  </div>
+
+  </div>
+
+  </div>
+  <link rel="stylesheet" href="./icons-1.8.1/font/bootstrap-icons.css">
+
+  <script src="./Javascript/Index/banner.js"></script>
+  <script src="./Javascript/Index/senha.js"></script>
+  <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+
+
+</html>

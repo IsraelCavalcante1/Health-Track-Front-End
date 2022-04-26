@@ -1,0 +1,48 @@
+Como muitos alunos, essa foi uma das minhas primeiras experiências com programação e principalmente voltada para o front-end (que particularmente não tinha muito interesse) e logo de cara já gostei muito.
+Aprendi muitas coisas novas durante essa atividade e essa nota é pra esclarecer um pouco do que pensei durante esse processo:
+
+
+Por que decidi mudar as "telas finais" do protótipo? Porque simplesmente amadureci no UI Designer, não achei que a minha atividade anterior de prototipação no Figma estava harmoniosa, principalmente em cores e
+onde os botões se encaixavam. Também fui tendo ideias novas durante o processo e, sinceramente, estou bastante orgulhoso do que se tornou.
+
+
+Por que usei tanto CSS ao invés de só seguir pelo Bootstrap? Bem, essa pergunta pode ser uma verdadeira controversia para a maioria das pessoas, mas sinceramente, eu preferi me aprofundar mais no CSS puro (apesar de ter usado o sistema
+de row e coluna do Bootstrap) porque achei mais útil e funcional e eu definitivamente vou me aprofundar muito mais nessa linguagem de estilização, para assim, escolher um framework que eu goste.
+
+
+
+Por que usei tanto Javascript? Bem, eu queria deixar o projeto do meu jeitinho e só poderia ser feito com o que o JS poderia proporcionar, apesar de não ter experiência nenhuma com ele, pesquisei bastante e consegui implementar 
+coisas absurdas e que eu jamais acharia que conseguiria (inclusive, as coisas pequenas e que são só detalhes, foram as que mais demoraram).
+
+
+
+
+
+Botões clicáveis das telas e suas ações:
+
+INDEX.HTML:
+Checkbox exibir senha = Desmarcada ela não faz nada, quando marcada exibe a senha (funcional com Javascript)
+Botão grande Entrar = Ele te redireciona para o Dashboard
+Não tem uma conta? Clique aqui = Te redireciona para a tela de Cadastro
+Entre com o Google = Também te redireciona para a tela de Dashboard
+
+
+REGISTRAR.HTML: 
+Voltar = Volta para a tela de Login/INDEX.HTML
+Enviar / confirmar o cadastro = Abre os termos de contrato e serviço.
+Na aba Termos e contrato de serviço se o usuário apertar em Fechar, nada acontecerá,
+se aceitar será redirecionado para a tela de Dashboard 
+
+
+Dashboard.HTML:
+
+Botão Logout/Desconectar: Te redireciona para a Index.HTML
+Botão Home/Menu: Te redireciona para o Dashboard principal
+Botão Metas, abaixo da foto: Te redireciona para a Metas.HTML
+
+
+Metas.HTML: 
+Botão de perfil, que nessa página não é fixo (como no Dashboard) fica no canto superior direito
+funciona 100% com JS
+Botão de Home para ser redirecionado para a página principal/Dashboard.HTML
+Botão Desconectar/Logout para ser redicionado para a tela de Login

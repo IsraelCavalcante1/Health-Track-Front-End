@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="./icons-1.8.1/font/bootstrap-icons.css">
+
+    <link href="./bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/registrar.css">
+    
+    
+
+    <title>Health-Track Registrar</title>
+</head>
+
+<body>
+    <div class="container-fluid vh-100 container-registro">
+        <div class="row flex-grow-1">
+
+            <div class="col-md-12 vh-100 flex-fill centralizar-coluna">
+                <div class="logo-cadastro">Health Track</div>
+                <div class="form-cadastro">
+                    <div class="titulo-cadastro">Cadastro</div>
+                    <hr class="linha-cadastro">
+                    <a class="voltar-flecha" href="./index.html"><i class="bi bi bi-arrow-left-circle "> Voltar</i></a>
+                    <div class="descricao-cadastro">Dados de Login</div>
+
+                    <form>
+
+                        <div class="row flex-grow-1">
+                            <div class="col-md-12 email">
+                                <label for="email">E-mail: * </label>
+                                <div class="input-group mb-3 inputs">
+
+                                    <input type="text" class="form-control" id="email-input"
+                                        placeholder="Digite o e-mail" aria-label="Senha" aria-describedby="basic-addon1"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="row flex-grow-1">
+                                <div class="col-md-6">
+                                    <label for="pwd">Senha: * </label>
+                                    <div class="input-group mb-3 senha-input">
+
+                                        <input type="password" class="form-control" placeholder="Digite a senha"
+                                            aria-label="Senha" aria-describedby="basic-addon1" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="pwd">Confirmar a senha: * </label>
+                                    <div class="input-group mb-3 senha-input">
+
+                                        <input type="password" id="myInput" class="form-control"
+                                            placeholder="Confirme a senha" aria-label="Senha"
+                                            aria-describedby="basic-addon1" required>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <hr class="linha-info-pessoal">
+                            <div class="info-pessoal">Informações pessoais</div>
+
+                            <div class="row flex-grow-1">
+                                <div class="col-md-6">
+                                    <label for="nome">Nome: * </label>
+                                    <div class="input-group mb-3 senha-input">
+
+                                        <input type="text" class="form-control" placeholder="Digite o seu nome"
+                                            aria-label="nome" aria-describedby="basic-addon1" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="sobrenome">Sobrenome: * </label>
+                                    <div class="input-group mb-3 senha-input">
+
+                                        <input type="text" class="form-control" placeholder="Digite o seu sobrenome"
+                                            aria-label="sobrenome" aria-describedby="basic-addon1" required>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row flex-grow-1">
+                                <div class="col-md-6 sexo-opcao">
+                                    <label for="select-sexo">Sexo *</label>
+                                    <select class="form-select" id="select-sexo" placeholder="Selecione um sexo"
+                                        garia-label="">
+                                        <option selected disabled hidden value="">Selecione seu sexo</option>
+                                        <option value="M">Masculino</option>
+                                        <option value="F">Feminino</option>
+                                        <option value="O">Outro</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="startDate">Ano de Nascimento *</label>
+                                    <input id="startDate" class="form-control data" type="date" required />
+                                </div>
+                            </div>
+
+
+
+                            <div class="row flex-grow-1">
+
+
+                                <div class="col-md-6">
+                                    <label for="selecionar-estado">Selecione seu Estado</label>
+                                    <select class="form-select selecionar-estado" id="selecionar-estado"
+                                        placeholder="Selecione um Estado" garia-label="">
+                                        <option selected hidden disabled value="1">Selecione seu Estado</option>
+                                        <option id="AC" value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="BA">Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="DF">Distrito Federal</option>
+                                        <option value="ES">Espírito Santo</option>
+                                        <option value="GO">Goiás</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="MT">Mato Grosso</option>
+                                        <option value="MS">Mato Grosso do Sul</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="PB">Paraíba</option>
+                                        <option value="PR">Paraná</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="RN">Rio Grande do Norte</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="RO">Rondônia</option>
+                                        <option value="RR">Roraima</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="SE">Sergipe</option>
+                                        <option value="TO">Tocantins</option>
+                                        <option value="EX">Estrangeiro</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <label for="Cidade">Cidade: </label>
+                                    <div class="input-group mb-3 senha-input">
+
+                                        <input type="text" class="form-control" placeholder="Qual a sua cidade?"
+                                            aria-label="nome" aria-describedby="basic-addon1" required>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="row flex-grow-1">
+                                    <div class="col-md-6 telefone">
+                                        <label for="telefone">Telefone: </label>
+                                        <div class="input-group mb-3">
+
+                                            <input type="text" class="form-control" placeholder="Exemplo +55119XXXXYYYY"
+                                                aria-label="telefone" aria-describedby="basic-addon1" required>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="row flex-grow-1">
+
+                                    <div class="col-md-3 enviar-btn">
+
+                                        <a class="btn btn-primary botao-enviar" data-bs-toggle="modal"
+                                            data-bs-target="#termosModal" "
+                                            role=" button">Enviar</a>
+
+                                            <!-- Criei um simples termos de serviço, onde o usuário tem que aceitar antes de continuar a criação da conta (Quando ele clicar em enviar, será redirecionado para a janela modal que o informará dos termos. Caso o usuário aceite, será redirecionado para a Dashboard, caso contrário, nada acontecerá e o registro não será concluído) -->
+
+                                        <!-- Termos e condições de serviço -->
+                                        <div class="modal fade" id="termosModal" tabindex="-1"
+                                            aria-labelledby="termosModal" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="termosModal">Termos e contrato
+                                                            de serviço</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                        Curabitur cursus ipsum eleifend, placerat neque
+                                                        et, molestie
+                                                        tortor. Nulla bibendum vehicula laoreet. Nulla in turpis eu
+                                                        massa sodales pellentesque. Mauris urna
+                                                        tortor, facilisis ut
+                                                        laoreet ac, gravida ut eros. Donec at auctor ipsum, eget
+                                                        volutpat velit. Aliquam tellus arcu, pretium
+                                                        vitae justo ut,
+                                                        sodales tincidunt felis. Mauris est libero, pellentesque a
+                                                        ultrices eget, dapibus id augue. Quisque dui
+                                                        ante, porta eget
+                                                        turpis eu, molestie laoreet libero. Proin sed nisl at nulla
+                                                        tempor pharetra. Curabitur sed euismod orci,
+                                                        eget ultricies
+                                                        libero. Nulla eget lectus risus. Class aptent taciti sociosqu ad
+                                                        litora torquent per conubia nostra, per
+                                                        inceptos
+                                                        himenaeos. In a dui vel dui commodo volutpat. Nulla vitae metus
+                                                        nec massa malesuada interdum ut sed est.
+                                                        Pellentesque
+                                                        habitant morbi tristique senectus et netus et malesuada fames ac
+                                                        turpis egestas.
+
+                                                        Pellentesque et interdum nulla. Lorem ipsum dolor sit amet,
+                                                        consectetur adipiscing elit. Aliquam eget
+                                                        dolor sit amet
+                                                        lacus accumsan pretium vel ac mi. Ut at risus imperdiet,
+                                                        pulvinar arcu ac, ultrices sem. Suspendisse
+                                                        congue, magna ut
+                                                        tempus blandit, nisi dui lobortis diam, sit amet placerat velit
+                                                        turpis eu lectus. Praesent efficitur,
+                                                        urna ac accumsan
+                                                        posuere, massa neque blandit dolor, sed euismod enim lectus a
+                                                        augue. Duis vitae sagittis enim. Sed
+                                                        pellentesque enim at
+                                                        lacus porttitor, eget facilisis ipsum pretium. Sed vitae odio ac
+                                                        velit rutrum vehicula. Pellentesque in
+                                                        urna at enim
+                                                        ullamcorper feugiat ut et mi.
+
+                                                        Nullam at risus in nulla laoreet pretium. Phasellus ut
+                                                        pellentesque elit, et luctus magna. Donec ac mi
+                                                        non lorem
+                                                        suscipit tincidunt. Ut pharetra orci ut egestas tristique.
+                                                        Aenean pretium convallis nisl eu mollis.
+                                                        Maecenas luctus
+                                                        mattis felis commodo viverra. Vivamus facilisis accumsan neque
+                                                        at cursus. Cras rhoncus lectus a
+                                                        pellentesque tincidunt.
+                                                        Duis pulvinar ex ut condimentum euismod. Curabitur sit amet quam
+                                                        in nisi imperdiet finibus. Nunc lacinia
+                                                        ultricies
+                                                        semper. Quisque vulputate risus in metus lacinia rutrum.
+                                                        Curabitur tempor rhoncus neque. Fusce porta
+                                                        tristique
+                                                        vestibulum. Quisque sit amet lobortis mauris, dignissim finibus
+                                                        mauris.
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-bs-dismiss="modal">Fechar</button>
+                                                            <a href="./dashboard.html"><button type="button"
+                                                                    class="btn btn-primary">Aceito</button></a>
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+                                </div>
+
+
+
+                            </div>
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <script src="./Javascript/Registrar/termo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+
+
+</html>

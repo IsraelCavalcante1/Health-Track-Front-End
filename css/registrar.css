@@ -1,0 +1,187 @@
+.vh-100 {
+    min-height: 100vh;
+}
+
+
+html  {
+height: 100%;
+font-family: samsungsharp;
+background: #E5E5E5;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:500);
+@font-face {
+    font-family: samsungsharp;
+    src: url("../fontes/samsungsharpsans.otf");
+  }
+
+  @font-face {
+    font-family: poetsenone;
+    src: url("../fontes/poetsen-one.ttf");
+  }
+
+
+
+
+		
+@media screen 
+{
+
+    .enviar-btn{
+        width: 10%;
+    }
+    .botao-enviar{
+       
+        margin-top: 30px;
+    }
+
+ 
+
+ 
+
+    .descricao-login{
+
+        margin-bottom: 30px;
+        color: #8692A6;
+    }
+
+   
+    .espaco-input{
+        margin-bottom: 10px;
+    }
+
+    div.form-cadastro{
+        -webkit-box-shadow: 0px 0px 15px 5px rgba(135,135,135,0.4); 
+        box-shadow: 0px 0px 15px 5px rgba(135,135,135,0.4);
+        background: white;
+        font-family: sans-serif !important;
+        padding: 40px;
+        border: 1px solid rgb(209, 206, 206);
+        border-radius: 2%;
+        
+    }
+
+  .titulo-cadastro{
+      font-weight: bold;
+    padding: 5px;
+    height: 38px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #6D63FF 0%, #3B32C0 100%);
+    color: white;
+    text-align: center;
+    font-size: 20px;
+  }
+
+    .btn-primary{
+            background: linear-gradient(180deg, #6D63FF 0%, #3B32C0 100%);
+            border: none !important;
+    }
+
+    .logo-cadastro{
+        margin-top: 2%;
+        background: -webkit-linear-gradient(180deg,#6D63FF 0%, #3B32C0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+        display: block;
+        font-size: 30px;
+        text-align: center;
+        font-family: poetsenone;
+    }
+
+
+    .email{
+        width: 97.2%;
+    }
+        
+    label{
+        color: #505050 !important;
+        font-weight: bold;
+        
+    }
+    
+        .label-input{
+            display: block;
+            
+            }
+
+
+
+    .descricao-cadastro{
+        color: #505050;
+        margin-rgb(134, 134, 134)px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .container-registro{
+        
+        background: #E5E5E5;  
+        padding-right: 30%;
+        padding-left: 30%;
+    }
+    .data{
+        width: 100%;
+    }
+
+
+            
+    .linha-cadastro{
+        
+        background-color: grey;
+        font-size: 20px;
+    }
+    .linha-info-pessoal{
+        margin-top: 10px;
+        background-color: grey;
+    }
+
+    .info-pessoal{
+        font-family: arial;
+    color: #505050;;
+        
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .sexo-opcao{
+        margin-bottom: 10px;
+    }
+
+    .selecionar-estado{
+        width: 100%;
+    }
+    .voltar-flecha{
+        text-decoration: none;
+        color: grey;
+        font-size: 18px;
+    }
+}
+
+
+ option:hover { 
+      background-color: yellow; 
+    } 
+    /*  Versão/Responsividade para dispositivos portáteis/pequeno porte */
+    
+    @media  only screen and (max-width: 1280px){
+        .container-registro{
+        
+        background: #E5E5E5;  
+        padding-right: 5%;
+        padding-left: 5%;
+        
+    }
+    }   
+
+    @media  only screen and (max-width: 740px){
+        .container-registro{
+        
+        background: #E5E5E5;  
+        padding-right: 5%;
+        padding-left: 5%;
+        
+    }
+    
+
+    }  

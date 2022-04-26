@@ -1,0 +1,936 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:500);
+@font-face {
+    font-family: samsungsharp;
+    src: url("../fontes/samsungsharpsans.otf");
+  }
+
+  @font-face {
+    font-family: poetsenone;
+    src: url("../fontes/poetsen-one.ttf");
+  }
+
+    html, body{
+        font-family: samsungsharp;
+        background: #E5E5E5;
+        min-width: 100%;
+        overflow-x: hidden;
+    }
+
+        .vh-100 {
+            min-height: 100vh;
+        }
+
+        /* Tentei não usar tanto CSS, como descrito na atividade, porém falhei miseravelmente, estou gostando muito dessa linguagem de estilização e pretendo me aprofundar mais nela, inclusive até optando por usar ela ao invés do Bootstrap*/
+
+
+@media screen {
+
+
+
+
+
+    /* CONTA MENU INICIO */
+
+    .fadeInDown {
+        opacity: 1 !important;
+        transform: translateY(40px) !important;
+    }
+
+    #menu-btn {
+        display: none;
+        position: fixed;
+        top: 50px;
+        right: 20px;
+        padding: 10px 20px;
+        border: 1px solid transparent;
+        font-weight: 300;
+        user-select: none;
+        transition: border-color 0.3s;
+        transform: translateY(-50%);
+        z-index: 99;
+        color: white;
+        padding-right: 0px;
+        padding-bottom: 45px;
+        font-size: 20px;
+    }
+    #menu-btn i {
+        margin-left: 10px;
+    }
+    #menu-btn:hover {
+        cursor: pointer;
+    }
+
+    #menu-painel-mobile {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 300px;
+        z-index: 9999;
+        background-color: white;
+        box-shadow: -1px -1px 12px rgb(0 0 0 / 14%);
+        user-select: none;
+        transform: translateX(300px);
+        transition: transform 0.5s;
+    }
+
+    .menu-conta-mobile {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: center;
+        top: 40px;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .menu-item-mobile {
+        width: 100%;
+        height: 60px;
+        opacity: 0;
+        transform: translateY(0);
+        transition: all 0.3s;
+    }
+
+    .menu-item-mobile i {
+        margin: 0 10px;
+    }
+    .menu-item-mobile a {
+        display: inline-block;
+        width: 100%;
+        height: 70px;
+        padding-left: 50px;
+        line-height: 70px;
+    }
+
+    .menu-painel-mobile-fechar {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        padding: 5px 10px;
+        transition: transform 0.5s;
+    }
+    .menu-painel-mobile-fechar:hover {
+        cursor: pointer;
+    }
+
+    /* CONTA MENU FIM */
+        
+
+    .menu-dashboard{
+        
+        margin-top: 20px;
+        height: 95%;
+        background: linear-gradient(180deg, #6D63FF 0%, #f87070 100%);
+        border-radius: 40px;
+        width: 97px;
+    }
+
+    .conta-menu{
+        background-color: white;
+        margin-right: -13px;
+        height: 100%;
+        border-radius: 10px;
+        font-weight: bold;
+        
+    }
+    .avatar{
+        width: 80px;
+        height: 80px;
+        margin-top: 20px;
+        border: 2px solid #6D63FF;
+        margin-left: 20px;
+        padding: 2px;
+        border-radius: 10px;
+    }
+    .notificacao-icone{
+        margin-top: 20px;
+        margin-left: 34px;
+    }
+    div .menu-dashboard hr{
+        margin-left: 15px;
+        margin-right: 15px;
+        color: white;
+        height: 1px;
+        opacity: 100%;
+    }
+    .circulo-icone-notificacao{
+        z-index: 1;
+        object-fit: cover;
+        position: absolute;
+        margin-top: 20px;
+        font-weight: 900;
+        margin-left: 52px;
+        font-size: 15px;
+        color: red;
+        border: 2px solid #6D63FF;
+        border-radius: 50%;
+        
+    }
+        .num-notificacao{
+        z-index: 2;
+        object-fit: cover;
+        position: absolute;
+        margin-top: 19px;
+        font-weight: 900;
+        margin-left: 58px;
+        color: white;
+        font-size: 13px;
+        }
+        
+        .notificacao{
+            position: relative;
+        }
+    .home-menu{
+        margin-left: 30px;
+        margin-top: 16px;
+    }
+    .logout-mobile{
+    position: absolute;
+    margin-left: 54px;
+    margin-top: 3vh;
+    }
+    .logout{
+    margin-left: 32px;
+    margin-top: 2vh;
+    }
+
+    .botoes-menu{
+        text-shadow: 0px 0px 5px #000000;
+        font-size: 33px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .botoes-menu:hover{
+        color: #E5E5E5;
+        text-shadow: 0px 0px 8px #000000;
+    }
+    .sono{
+        margin-left: 34px;
+        margin-top: 20px;
+    }
+
+    .ajuda-botao{
+        text-shadow: 0px 0px 5px #000000;
+        position: sticky;
+        padding-top: 54vh;
+        margin-left: 38px;
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+    }
+    .ajuda-botao:hover{
+        color: #E5E5E5;
+        text-shadow: 0px 0px 8px #000000;
+    }
+    .amigo-botao{
+        font-size: 30px ;
+        margin-top: 20px;
+        margin-left: 30px;
+
+    }
+    .ranking-botao{
+        margin-top: 20px;
+        margin-left:30px ;
+    }
+
+
+    #chart{
+        font-size: 20px;
+        max-width: 900px;
+    }
+
+    .apexcharts-canvas{
+        background: #ffffff;
+        border-radius: 2%;
+    }
+
+    .descricao-grafico{
+        margin-top: 48px;
+        font-size: 20px;
+    }
+    .nome-usuario{
+        margin-left: auto;
+        margin-top: 30px;
+    }
+    .status-usuario{
+        font-size: 14px;
+        margin-left: 24px;
+        text-align: center;
+        margin-top: -10px;
+        color: rgb(179, 179, 179);
+        position: relative;
+    }
+    .input-procurar{
+        border-radius: 10px 0px 0px 10px;
+        width: 100%;
+    }
+
+    .botao-procurar{
+        border-radius: 0px 10px 10px 0px;
+        background-color: #6D63FF;
+        border: none;
+    }
+    .procurar{
+        padding-top: 20px;
+    }
+    .procurar-tamanho-col{
+    }
+
+
+    canvas {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    }
+
+    .gauge-grafico{
+        text-align: center;
+        font-size: 14px;
+        margin-top: 29vh;
+        
+        
+    }
+    .peso-perdido{
+        color: grey;
+        font-weight: normal;
+    }
+    .icone-configuracao{
+        border-radius: 7px;
+        color: #20B9FD;
+        background: #E5F8FF;
+        font-size: 30px;
+        text-align: center;
+    }
+    .botao-texto-conta-menu{
+        margin-top: 10px;
+    }
+    .botao-margin-menu{
+        border-radius: 7px;
+        margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 62px;
+    }
+    .botoes-conta-menu-config{
+        padding-left: 0px;
+        padding-right:0px;
+    }
+
+    .icone-dieta{
+        border-radius: 7px;
+        color: #5631FA;
+        background: #ECEAFF;
+        font-size: 30px;
+        text-align: center;
+
+    }
+    .icone-meta{
+        border-radius: 7px;
+        color: #FD6B22;
+        background: #FEF0E7;
+        font-size: 30px;
+        text-align: center;
+        
+    }
+
+    .botoes-conta-menu{
+        margin-top: 200px;
+    }
+
+
+    .box-baixo{
+        width: 277px;
+    height: 222px;
+
+    background: #E95F8B;
+    border-radius: 40px;
+    }
+
+    .box-cima{
+        width: 277px;
+    height: 126px;
+
+    background: #FF9ABA;
+    border: 2px solid #FFD7D7;
+    box-sizing: border-box;
+    border-radius: 40px;
+    }
+    .box-dentro{
+    margin-left: 29px;
+    margin-top: 26px;
+    width: 81px;
+    height: 74px;
+
+    background: #FF8CB1;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    }
+    .foto-agua{
+        width: 47.41px;
+        margin-top: 15px;
+        margin-left: 17px;
+    }
+    .agua-descricao{
+        color: white;
+        font-weight: bold;
+        padding-top: 40px;
+        padding-left: 20px;
+    }
+    .agua-descricao-meta{
+        font-weight: normal;
+        font-size: 14px;
+    }
+    .foto-complemento{
+    padding-top: 40px;
+        padding-left: 0;
+    }
+    .agua-texto{
+        color: white;
+        padding-top: 50px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .box-passos-grande{
+    width: 277px;
+    height: 110px;
+
+
+    margin-top: 73px;
+    padding-top: 18px;
+    padding-left: 22px;
+    background: linear-gradient(180deg, #6D63FF 0%, #3B32C0 100%);
+    border-radius: 40px;
+    }
+
+    .box-passos-pequena{
+    width: 81px;
+    height: 74px;
+    padding-top: 9px;
+    padding-left: 13px;
+
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    }
+
+    .passos-diarios{
+        padding-left:0px;
+        color: white;
+        padding-top: 8px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .agua{
+        margin-top: 73px;
+        
+    }
+    .box-passos{
+        padding-left: 40px;
+    }
+
+    .quadrado-grande-botoes-inferior{
+        margin-top: 80px;
+        width: 288px;
+        height: 257px;
+        margin-right: 48px;
+        background: #FFFFFF;
+        border-radius: 50px;
+
+    }
+    .quadrado-pequeno-botoes-inferior{
+    width: 92px;
+    border-radius: 20px;
+    height: 83px;
+    margin-left: 88px;
+        margin-top: -38px;
+    background: linear-gradient(180deg, #3F36C6 0%, #4439DE 100%);
+    box-shadow: 0px 4px 7px -1px rgba(0, 0, 0, 0.25);
+    position: sticky;
+            
+
+    }
+
+    .titulo-botoes-inferior{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.005em;
+    text-align: center;
+    color: #4138D0;
+    margin-top: 26px;
+    }
+
+    .subtitulo-botoes-inferior{
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: -0.005em;
+
+    color: #787878;
+    }
+    .titulo-progresso{
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.005em;
+    color: #4138D0;
+    margin-top:32px;
+    }
+    .barra-progresso-inferior{
+        background:linear-gradient(90deg, rgba(109,99,255,1) 21%, rgba(59,50,192,1) 65%);
+        
+    }
+    .barra-progresso{
+        height: 8px !important;
+    }
+    .objetivo-botao-inferior{
+        margin-top: 10px;
+        color: #787878;
+    }
+    .imagem-botao-inferior{
+        margin-left: 23px;
+        margin-top: 15px;
+    }
+    .foto-calorias{
+        width: 56px;
+        height: 56px;
+    }
+        .botao-menu{
+            display: none;
+        }
+        .botao-perfil{
+            display: none;
+        }
+
+        .header {
+
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 100%;
+        box-shadow: none;
+
+        background-color: #6D63FF ;
+        position: fixed;
+        height: 60px!important;
+        overflow: hidden;
+        z-index: 99;
+    }
+
+
+
+    .main {
+        margin: 0 auto;
+        display: block;
+        height: 100%;
+        margin-top: 60px;
+    }
+    .mainInner{
+        display: table;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    .mainInner div{
+        display:table-cell;
+        vertical-align: middle;
+        font-size: 3em;
+        font-weight: bold;
+        letter-spacing: 1.25px;
+    }
+    #sidebarMenu {
+        position:relative;
+        z-index: 99;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        width: 107px;
+        margin-top: 60px;
+        transform: translateX(-250px);
+        transition: transform 250ms ease-in-out;
+        background: linear-gradient(180deg, #6D63FF 0%, #f87070 100%);
+        
+    }
+    .sidebarMenuInner{
+        margin:0;
+        padding:0;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.10);
+    }
+
+
+    .sidebarMenuInner li{
+        list-style: none;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 20px;
+        cursor: pointer;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    }
+    .sidebarMenuInner li span{
+        display: block;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.50);
+    }
+    .sidebarMenuInner li a{
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    input[type="checkbox"]:checked ~ #sidebarMenu {
+        transform: translateX(0);
+    }
+
+    input[type=checkbox] {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        display: none;
+    }
+
+    .sidebarIconToggle {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        cursor: pointer;
+        position: fixed;
+        z-index: 99;
+        height: 100%;
+        width: 100%;
+        top: 22px;
+        left: 15px;
+        height: 22px;
+        width: 22px;
+        display: none;
+    }
+    .spinner {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background-color: #fff;
+    }
+    .horizontal {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: relative;
+        float: left;
+        margin-top: 3px;
+    }
+    .diagonal.part-1 {
+        position: relative;
+        transition: all 0.3s;
+        box-sizing: border-box;
+        float: left;
+    }
+
+
+
+    .diagonal.part-2 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: relative;
+        float: left;
+        margin-top: 3px;
+    }
+    input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        opacity: 0;
+    }
+    input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        transform: rotate(135deg);
+        margin-top: 8px;
+    }
+    input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        transform: rotate(-135deg);
+        margin-top: -9px;
+    }
+    .logo-mobile-animacao{
+    color: White;
+    font-family: poetsenone;
+    margin-left: 45%;
+    font-size: 30px;
+    margin-top: 10px;
+    }
+    .botao-margin-menu:hover{
+            box-shadow:  4px 1px 7px -1px rgb(0 0 0 / 25%);
+            
+
+}
+
+a {
+        color: black;
+    text-decoration: none;
+}
+
+
+
+
+
+@media  only screen and (max-width: 1343px){
+
+    .coluna-avatar-nome{
+        width: 100%;
+    }
+
+    
+    .ajuda-botao{
+        display: none;
+    }
+    .botao-margin-menu{
+        margin-right: 0px;
+    }
+    
+    .tamanho-icone-perfil-mobile{
+        padding-right: 0px;
+        padding-left: 0px;
+        width: 100%;
+    }
+
+    .icone-meta:hover{
+                box-shadow: 0px 4px 7px -1px rgb(0 0 0 / 25%);
+
+    }
+    .icone-dieta:hover{
+                box-shadow: 0px 4px 7px -1px rgb(0 0 0 / 25%);
+
+    }
+    .icone-configuracao:hover{
+                box-shadow: 0px 4px 7px -1px rgb(0 0 0 / 25%);
+
+    }
+
+
+    .num-notificacao {
+    
+    margin-top: 20px;
+    
+    margin-left: 40px;
+  
+}
+
+.circulo-icone-notificacao {
+   
+    margin-top: 20px;
+   
+    margin-left: 34px;
+ 
+  
+}
+.notificacao-icone {
+    margin-top: 20px;
+    margin-left: 19px;
+}
+.home-menu {
+    margin-left: 15px;
+    margin-top: 16px;
+}
+.sono {
+    margin-left: 22px;
+    margin-top: 20px;
+}
+
+.amigo-botao {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+.ranking-botao {
+    margin-top: 20px;
+    margin-left: 16px;
+}
+.logout-mobile {
+    position: absolute;
+    margin-left: 37px;
+    margin-top: 3vh;
+}
+    #menu-btn{
+        display: block;
+    }
+    .sidebarIconToggle{
+        display: block;
+    }
+    .logo-mobile-animacao{
+        margin-left: 31%;
+    }
+    .botao-texto-conta-menu{
+        display: none;
+    }
+    .nome-usuario{
+        text-align: center;
+        margin-left: 2px;
+    }
+    .status-usuario{
+        text-align: center;
+        margin-left: none;
+    }
+    .avatar{
+        margin-left: 35%;
+    }
+
+    .menu-item-mobile{
+        padding-right:21px ;
+    }
+    .botao-perfil{
+        width: 10%;
+    }
+    .botao-menu{
+        width: 25%;
+    }
+    .coluna-logo{
+        width: 60%;
+    }
+    .menu-dashboard{
+        display: none;
+    }
+    .conta-menu{
+        display: none;
+    }
+
+
+    .input-procurar{
+        width: 100%;
+    }
+    .procurar-col-1{
+        margin-left: 5px;
+        width: 85%;
+    }
+    .procurar-col-2{
+        width: 10%;
+    }
+    .descricao-grafico{
+        font-size: 16px;
+    }
+    .box-passos-grande{
+        width: 277px;
+        height: 80px;
+        padding-top: 8px;
+        margin-left: 26px;
+        margin-top: 20px;
+    }
+    .box-passos-pequena{
+        width: 71px;
+        height: 64px;
+        padding-top: 9px;
+        padding-left: 13px;
+    }
+    .passos-diarios{
+        padding-top:2px ;
+    }
+    .tenis{
+        height: 50px;
+    }
+    .botao-passos{
+        width: 40%;
+
+    }
+    .botao-agua{
+
+        width: 49%;
+    }
+    .foto-complemento{
+        padding-right: 3px;
+    }
+    .agua{
+        margin-left: 14px;
+        margin-top: 20px;
+    }
+    .quadrado-grande-botoes-inferior{
+    width: 176px;
+    height: 146px;
+    margin-right: 21px;
+    margin-left: 11px;
+    }
+    .titulo-botoes-inferior{
+        font-size: 16px;
+    }
+    .quadrado-pequeno-botoes-inferior{
+         width: 72px;
+        border-radius: 20px;
+        height: 63px;
+        margin-left: 45px;
+        margin-top: -49px;
+        background: linear-gradient(180deg, #3F36C6 0%, #4439DE 100%);
+        box-shadow: 0px 4px 7px -1px rgb(0 0 0 / 25%);
+        position: sticky;
+    }
+    .imagem-botao-inferior{
+        margin-left: 14px;
+        margin-top: 8px;
+    }
+    .titulo-botoes-inferior{
+        padding-top: 5px;
+        margin: 0;
+    }
+    .titulo-progresso{
+        font-size: 11px;
+        margin: 0;
+    }
+    .objetivo-botao-inferior{
+        font-size: 11px;
+    }
+    .botoes-inferior{
+        
+    }
+
+}
+
+
+
+
+
+@media  only screen and (max-width: 414px){
+
+   .quadrado-grande-botoes-inferior{
+    width: 156px;
+    height: 146px;
+    margin-right: 10px;
+    margin-left: 10px;
+    }
+    .quadrado-pequeno-botoes-inferior {
+        margin-left: 30px;
+    
+}
+    .objetivo-botao-inferior{
+        font-size: 11px;
+        margin-top: 7px;
+        margin-left: 9px;
+    }
+    .titulo-botoes-inferior{
+        padding: 0;
+        font-size: 14px;
+    }
+    .subtitulo-botoes-inferior{
+        font-size: 13px;
+    }
+    .box-passos{
+        padding-left: 20px;
+    }
+    
+}
+
+@media  only screen and (max-height: 740px){
+    .gauge-grafico{
+        margin-top: 1vh;
+    }
+
+}}
+
+
+
+

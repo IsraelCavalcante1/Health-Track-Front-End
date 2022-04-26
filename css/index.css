@@ -1,0 +1,262 @@
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:500);
+@font-face {
+    font-family: samsungsharp;
+    src: url("../fontes/samsungsharpsans.otf");
+  }
+
+  @font-face {
+    font-family: poetsenone;
+    src: url("../fontes/poetsen-one.ttf");
+  }
+
+
+
+
+		
+@media screen 
+{
+    .vh-100 {
+        max-height: fit-content;
+    }
+    
+     html  {
+    height: 100%;
+    font-family: samsungsharp;
+    }
+  
+    /* Estilização da parte esquerda (Banner) */
+        .logo-login{
+        
+        
+        font-size: 30px;
+        text-align: center;
+        font-family: poetsenone;
+    }
+    .logo-login-mobile{
+        display: none;
+        font-size: 30px;
+        text-align: center;
+        font-family: poetsenone;
+    }
+
+    .logo-imagem-login{
+        display: block;
+    margin-left: auto;
+    margin-right: auto;
+        height: 7%;
+        width: 7%;
+    }
+    .titulo-login{
+        margin-bottom: 2px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .background-logo{
+        background: linear-gradient(180deg, #6D63FF 0%, #f87070 100%);
+ 
+    }
+
+    .descricao-login{
+        margin-bottom: 20px;
+        color: #8692A6;
+    }
+
+    
+    .gif-logo-login{
+        width: auto;
+        height: auto;
+    }
+
+    #slider{
+        width: 100%;
+        max-width: 1000px;
+        
+        position: relative;
+    }
+
+    #slider div{
+        opacity: 0;
+        /* width: 100%;
+        height: 100%; */
+        object-fit: cover;
+        transition: opacity 800ms;
+        position:absolute;
+    }
+
+    #slider div.selected{
+        opacity:1;
+    }
+
+    .titulo-login-frases{
+        margin: auto;
+        /* margin-top: -24px;
+        margin-bottom: 15px; */
+        font-weight: bold;
+        text-align: center;
+        display: block;
+        font-size: 35px;
+        
+    }
+
+    .descricao-login-frases{
+        color: white;
+        text-align: center;
+        display: block;
+        font-size: 18px;
+        margin-bottom: 10px;
+        
+    }
+
+    .imagem-login-frases-1{
+        width: 100%;
+        border-radius: 5%;
+    }
+
+    .imagem-login-frases-2{
+
+        width: 100%;
+        border-radius: 5%;
+    }
+
+    .tela-login-banner{
+        padding: 7%;
+    }
+
+
+    /* Estilização lado direito (Formulário de Login) */
+
+    
+    .espaco-input{
+        margin: auto;
+    }
+      .centralizando-tela-login{
+    padding: 10%;
+    }
+
+
+    .botao-entrar{
+        width: 100%;
+        margin-top: 30px;
+     background: linear-gradient(180deg, #6D63FF 0%, #3B32C0 100%);
+
+    }
+
+    .hyperlink-botao-entrar{
+        width: 100%;
+        margin-top: 30px;
+        color: white;
+        text-decoration: none;
+    }
+    .espaco-mostrar-senha{
+        margin: auto;
+    }
+
+    div.borda-tela-login{
+        font-family: sans-serif !important;
+        padding: 40px;
+        border: 1px solid rgb(209, 206, 206);
+        border-radius: 2%;
+        
+    }
+
+    .hyperlink-registrar{
+        text-decoration: none;
+    }
+
+    .label-input{
+        display: block;
+    }
+
+    /* Botão Registrar-Se com o Google */
+
+    .google-btn {
+        
+        margin: auto;
+        margin-top: 10px;
+        width: 184px;
+        height: 42px;
+        background-color: #4285f4;
+        border-radius: 2px;
+        box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+    }
+    .google-btn .google-icon-wrapper {
+        position: absolute;
+        margin-top: 1px;
+        margin-left: 1px;
+        width: 40px;
+        height: 40px;
+        border-radius: 2px;
+        background-color: #fff;
+    }
+    .google-btn .google-icon {
+        
+        position: absolute;
+        margin-top: 11px;
+        margin-left: 11px;
+        width: 18px;
+        height: 18px;
+    }
+    .google-btn .btn-text {
+        text-decoration: none;
+        float: right;
+        margin: 12px 25px 0px 0px;
+        color: #fff;
+        font-size: 12px;
+        letter-spacing: 0.2px;
+        font-family: "Roboto";
+    }
+    .google-btn:hover {
+        box-shadow: 0 0 6px #4285f4;
+    }
+    .google-btn:active {
+        background: #1669f2;
+    }
+
+
+    .botao-google{
+        padding-top: 40ppx;
+    }
+    .opcao-google{
+        color: grey;
+        padding-top: auto;
+        padding-top: 10px;
+        text-align: center;
+
+        
+    }
+   
+}
+
+
+
+
+/* Media para dispositivos móveis */
+
+@media  only screen and (max-width: 768px){
+    /* Dispositivos móveis/portáteis de pequeno porte não verão o banner rotativo. */
+    .banner{
+        display: none;
+    }
+    /* Aqui é uma logo que eu criei especificamente para a versão mobile */
+    .logo-login-mobile{
+        display: block;
+          background: -webkit-linear-gradient(#6D63FF 0%, #3B32C0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    }
+    
+}
+
+
+
+
+
+
+		
+
+		
+
+

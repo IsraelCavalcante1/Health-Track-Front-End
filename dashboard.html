@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link href="./bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/dashboard.css">
+    <title>Health-Track Dashboard</title>
+
+</head>
+
+
+
+<body>
+
+    <!-- Uma parte do código da versão mobile foi escrito por cima da classe container-fluid pelo fato dela estar empurrando o conteúdo para baixo quando era inserido dentro -->
+    <!-- Penso que teria formas melhores de contornar esse problema, porém não consegui implementar e assumi que era um "problema" do próprio Bootstrap. Uma das possíveis soluções
+        era ter usado outro HTML para fazer a versão Mobile inteira, porém não julguei necessário. Espero que meu código esteja legível e com boas práticas (Juro que tentei, minha primeira vez com a linguagem)-->
+
+
+    <!-- Cabeçalho com a Logo -->
+    <div class="header">
+        <p class="logo-mobile-animacao">
+            Health Track
+        </p>
+    </div>
+    <!-- Menu da versão mobile -->
+    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner diagonal part-1"></div>
+        <div class="spinner horizontal"></div>
+        <div class="spinner diagonal part-2"></div>
+    </label>
+
+    <div id="menu-btn" onClick="showMenu(true)"><i class="fa-solid fa-user"></i></div>
+
+    <div id="sidebarMenu">
+
+        <ul class="sidebarMenuInner">
+
+            <li>
+                <div class="notificacao">
+                    <label class="num-notificacao">9</label>
+                    <i class="fa-solid fa-circle circulo-icone-notificacao"></i>
+                    <i title="Notificações" class="fa-regular fa-bell notificacao-icone botoes-menu"></i>
+                </div>
+            </li>
+
+            <li>
+                <a href="./dashboard.html"><i title="Menu Principal"
+                        class="fa-solid fa-house home-menu botoes-menu"></i></a>
+            </li>
+
+            <li>
+                <i title="Sono" class="fa-solid fa-moon botoes-menu sono"></i>
+            </li>
+            <li><i title="Amigos" class="fa-solid fa-user-group
+                botoes-menu amigo-botao"></i></li>
+            <li>
+                <i title="Ranking" class="fa-solid fa-medal botoes-menu ranking-botao"></i>
+            </li>
+
+            <a href="index.html"><i title="Logout"
+                    class="fa-solid fa-arrow-right-from-bracket botoes-menu  logout-mobile"></i></a>
+
+
+
+            <i title="Ajuda" class="fa-solid fa-circle-question ajuda-botao"></i>
+        </ul>
+    </div>
+    </div>
+    <!-- Menu do perfil de usuário da tela Mobile -->
+    <div id="menu-painel-mobile">
+        <i id="menu-painel-mobile-fechar" class="menu-painel-mobile-fechar fa fa-angle-left fa-2x"
+            onClick="showMenu(false)"></i>
+        <ul class="menu-conta-mobile">
+            <!-- Aqui temos os botões do menu de usuário da tela mobile-->
+            <li>
+                <div class="div-avatar">
+                    <div class="row">
+                        <div class="col-md-5 coluna-avatar-nome">
+                            <img class="avatar" src="./Imagens/avatar.jpg" alt="">
+                        </div>
+                        <div class="col-md-7 coluna-avatar-nome">
+                            <p class="nome-usuario">Israel Cavalcante</p>
+                            <p class="status-usuario"> Está Online </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <a href="./metas.html">
+                <li class="menu-item-mobile">
+                    <div class="row botao-margin-menu">
+                        <div class="col-md-3 tamanho-icone-perfil-mobile">
+                            <div class="icone-meta ">
+                                <i class="fa-solid fa-bullseye"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="botao-texto-conta-menu">
+                                Metas
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </a>
+
+            <li class="menu-item-mobile">
+                <div class="row botao-margin-menu">
+                    <div class="col-md-3 tamanho-icone-perfil-mobile">
+                        <div class="icone-dieta ">
+                            <i class="fa-solid fa-apple-whole"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="botao-texto-conta-menu">
+                            Dieta
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="menu-item-mobile">
+                <div class="row botao-margin-menu">
+                    <div class="col-md-3 tamanho-icone-perfil-mobile">
+                        <div class="icone-configuracao">
+                            <i class="fa-solid fa-gear "></i>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="botao-texto-conta-menu">
+                            Configurações
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="menu-item-mobile">
+                <div class="row gauge-grafico">
+                    <p>Meta Mensal</p>
+                    <p>Peso perdido: 5kg <span class="peso-perdido">/ 10kg </span></p>
+                    <div id="canvas-holder">
+                        <canvas id="gauge-mobile"></canvas>
+                    </div>
+
+                </div>
+            </li>
+            <!-- Aqui é o final do menu de perfil da tela mobile -->
+        </ul>
+    </div>
+
+    <!-- Div para centrolar o conteúdo e tirar scroll desnecessário -->
+    <div id='center' class="main center"></div>
+    <div class="container-fluid vh-100">
+        <div class="row flex-grow-1 vh-100">
+            <div class="col-md-1">
+                <!-- Menu da Tela Desktop que fica localizado ao lado esquerdo -->
+                <div class="menu-dashboard">
+                    <!-- Botão de Notificações -->
+                    <div class="notificacao">
+                        <label class="num-notificacao">9</label>
+                        <i class="fa-solid fa-circle
+                            circulo-icone-notificacao"></i>
+                        <i title="Notificações" class="fa-regular fa-bell
+                            notificacao-icone botoes-menu"></i>
+                    </div>
+
+                    <hr>
+                    <!-- Botão para ir pra tela Principal/Dashboard -->
+                    <div>
+                        <a href="dashboard.html"><i title="Menu Principal" class="fa-solid fa-house
+                            home-menu botoes-menu"></i>
+                        </a>
+                    </div>
+
+                    <!-- Botão para monitorar o sono e acompanhar estatisticas do mesmo -->
+                    <div>
+                        <i title="Sono" class="fa-solid fa-moon botoes-menu
+                            sono"></i>
+                    </div>
+                    <!-- Botão para a parte "Social" do aplicativo, onde fica localizado seus amigos e atividades -->
+                    <div>
+                        <i title="Amigos" class="fa-solid fa-user-group
+                            botoes-menu amigo-botao"></i>
+                    </div>
+                    <!-- Ranking para monitorar o progresso dos seus amigos e também acompanhar sua posição semanal -->
+                    <div>
+                        <i title="Ranking" class="fa-solid fa-medal
+                            botoes-menu ranking-botao"></i>
+                    </div>
+                    <!-- Botão de logout para se desconectar e voltar para a tela de Login -->
+                    <div>
+                        <a href="index.html"><i title="Desconectar"
+                                class="fa-solid fa-arrow-right-from-bracket botoes-menu  logout"></i></a>
+
+                    </div>
+                    <!-- Botão para ir ao FAQ do aplicativo -->
+                    <div>
+                        <i title="Ajuda" class="fa-solid fa-circle-question
+                            ajuda-botao"></i>
+                    </div>
+                </div>
+                <div>
+
+                </div>
+            </div>
+
+            <!-- Input para procurar no aplicativo, será exibido o que o usuário quiser procurar dentro do aplicativo, sendo possível pesquisar por menus/configurações específicas e etc -->
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="procurar">
+                            <div class="row">
+                                <div class="col-md-6 p-0 procurar-col-1">
+                                    <div class="form-outline">
+                                        <input placeholder="Procure" type="search" id="form1"
+                                            class="form-control input-procurar" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 p-0 procurar-col-2">
+                                    <button type="button" class="btn btn-primary
+                                                                                            botao-procurar">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <!-- Gráfico principal para acompanhar passos semanal e calorias perdidas -->
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="descricao-grafico">
+                            <span>Gráfico de Atividade e Calorias perdidas</span>
+                        </div>
+                        <div id="chart">
+
+
+                        </div>
+                    </div>
+
+                    <!-- Botões do conteúdo central -->
+                    <div class="col-md-4 box-passos">
+
+                        <div class="row">
+                            <!-- Botão passos diários -->
+                            <div class="col-md-12">
+
+                                <div class="box-passos-grande">
+
+                                    <div class="row ">
+                                        <div class="col-md-6 botao-passos">
+
+                                            <div class="box-passos-pequena">
+                                                <div class="col-md-6">
+                                                    <img class="tenis" src="./Imagens/tenis.png" alt="">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 passos-diarios botao-passos">
+
+                                            <span>Passos Diários</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Botão para acompanhar estatisticas do consumo de água -->
+                        <div class="row agua">
+                            <div class="col-md-12">
+                                <div class="box-baixo">
+
+                                    <div class="box-cima">
+                                        <div class="row">
+                                            <div class="col-md-6 botao-agua">
+                                                <div class="box-dentro">
+                                                    <img class="foto-agua" src="./Imagens/agua.png" alt="">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 botao-agua">
+                                                <p class="agua-texto">Água</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-6 agua-descricao botao-agua">
+                                                <span>Consumido</span>
+                                                <p>400ML <span class="agua-descricao-meta"> /1.000ML</span></p>
+
+                                            </div>
+                                            <div class="col-md-6 foto-complemento botao-agua">
+                                                <img src="./Imagens/Vector 12.svg" alt="">
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Botões inferiores que são quatro: Ciclismo, Corrida, Passos e Calorias perdidas. Todos eles deveriam levar para uma tela específica sobre aqueles dados com mais detalhes. Média semanal, Mensal, quanto teve de aumento e etc... -->
+
+
+                <div class="row botoes-inferior">
+                    <div class="col-md-3 quadrado-grande-botoes-inferior">
+
+                        <div class="quadrado-pequeno-botoes-inferior">
+                            <img class="imagem-botao-inferior" src="./Imagens/bicicleta.png" alt="">
+                        </div>
+                        <p class="titulo-botoes-inferior">Ciclismo</p>
+                        <p class="subtitulo-botoes-inferior">10km / semana</p>
+                        <p class="titulo-progresso">Progresso</p>
+                        <div class="progress barra-progresso">
+                            <div class="progress-bar w-75 barra-progresso-inferior" role="progressbar"
+                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p class="objetivo-botao-inferior">Objetivo: 50km / semana</p>
+                    </div>
+                    <div class="col-md-3 quadrado-grande-botoes-inferior">
+
+                        <div class="quadrado-pequeno-botoes-inferior">
+                            <img class="imagem-botao-inferior" src="./Imagens/corrida.png" alt="">
+                        </div>
+                        <p class="titulo-botoes-inferior">Corrida</p>
+                        <p class="subtitulo-botoes-inferior">8km / semana</p>
+                        <p class="titulo-progresso">Progresso</p>
+                        <div class="progress barra-progresso">
+                            <div class="progress-bar w-75 barra-progresso-inferior" role="progressbar"
+                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p class="objetivo-botao-inferior">Objetivo: 30km / semana</p>
+                    </div>
+                    <div class="col-md-3 quadrado-grande-botoes-inferior">
+
+                        <div class="quadrado-pequeno-botoes-inferior">
+                            <img class="imagem-botao-inferior" src="./Imagens/tenis.png" alt="">
+                        </div>
+                        <p class="titulo-botoes-inferior">Passos</p>
+                        <p class="subtitulo-botoes-inferior">8.900 / semana</p>
+                        <p class="titulo-progresso">Progresso</p>
+                        <div class="progress barra-progresso">
+                            <div class="progress-bar w-75 barra-progresso-inferior" role="progressbar"
+                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p class="objetivo-botao-inferior">Objetivo: 35.000 / semana</p>
+                    </div>
+                    <div class="col-md-3 quadrado-grande-botoes-inferior">
+
+                        <div class="quadrado-pequeno-botoes-inferior">
+                            <img class="imagem-botao-inferior foto-calorias" src="./Imagens/calorias.png" alt="">
+                        </div>
+                        <p class="titulo-botoes-inferior">Calorias Perdidas</p>
+                        <p class="subtitulo-botoes-inferior">400Kcal / semana</p>
+                        <p class="titulo-progresso">Progresso</p>
+                        <div class="progress barra-progresso">
+                            <div class="progress-bar w-75 barra-progresso-inferior" role="progressbar"
+                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p class="objetivo-botao-inferior">Objetivo: 750Kcal / semana</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <!-- Perfil da Tela desktop -->
+            <div class="col-md-2 coluna-conta-menu">
+
+                <div class="conta-menu">
+                    <!-- Imagem de perfil -->
+                    <div class="div-avatar">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <img class="avatar" src="./Imagens/avatar.jpg" alt="">
+                            </div>
+                            <!-- Nome do Usuário -->
+                            <div class="col-md-7">
+                                <p class="nome-usuario">Israel
+                                    Cavalcante</p>
+                                <!-- Status do Usuário -->
+                                <span class="status-usuario">
+                                    Está Online
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Botões do menu de Perfil -->
+                    <div class="botoes-conta-menu">
+                        <a href="./metas.html">
+                            <div class="row botao-margin-menu">
+                                <div class="col-md-3 botoes-conta-menu-config">
+                                    <div class="icone-meta">
+                                        <i class="fa-solid fa-bullseye"></i>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-9">
+                                    <div class="botao-texto-conta-menu">
+                                        Metas
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <div class="row botao-margin-menu">
+                            <div class="col-md-3 botoes-conta-menu-config">
+                                <div class="icone-dieta">
+                                    <i class="fa-solid fa-apple-whole"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="botao-texto-conta-menu">
+                                    Dieta
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="row botao-margin-menu">
+                            <div class="col-md-3 botoes-conta-menu-config">
+                                <div class="icone-configuracao">
+                                    <i class="fa-solid fa-gear "></i>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="botao-texto-conta-menu">
+                                    Configurações
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Gráfico do menu do perfil onde exibe o peso perdido e a meta mensal -->
+                    <div class="row gauge-grafico">
+                        <p>Meta Mensal</p>
+                        <p>Peso perdido: 5kg <span class="peso-perdido">/ 10kg </span></p>
+                        <div id="canvas-holder">
+                            <canvas id="gauge"></canvas>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    </div>
+    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="./Javascript/Dashboard/gauge.js"></script>
+    <script src="https://kit.fontawesome.com/67f01a5142.js" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/chart.js@2.8.0/dist/Chart.bundle.js"></script>
+    <script src="https://unpkg.com/chartjs-gauge@0.3.0/dist/chartjs-gauge.js"></script>
+    <script src="./Javascript/Dashboard/dashboard.js"></script>
+    <script src="./Javascript/Dashboard/menuContaMobile.js"></script>
+
+
+</body>
+
+</html>
